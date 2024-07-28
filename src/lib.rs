@@ -87,10 +87,7 @@ impl Build {
         let codegen_source_dir = source_dir_base.join("luau").join("CodeGen").join("src");
         let codegen_include_dir = source_dir_base.join("luau").join("CodeGen").join("include");
         let compiler_source_dir = source_dir_base.join("luau").join("Compiler").join("src");
-        let compiler_include_dir = source_dir_base
-            .join("luau")
-            .join("Compiler")
-            .join("include");
+        let compiler_include_dir = source_dir_base.join("luau").join("Compiler").join("include");
         let custom_source_dir = source_dir_base.join("luau").join("Custom").join("src");
         let vm_source_dir = source_dir_base.join("luau").join("VM").join("src");
         let vm_include_dir = source_dir_base.join("luau").join("VM").join("include");
@@ -240,7 +237,7 @@ impl Build {
         } else if target.contains("android") {
             Some("c++_shared".to_string())
         } else {
-            Some("stdc++".to_string())
+            Some("c++".to_string())
         }
     }
 }
